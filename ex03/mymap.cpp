@@ -12,14 +12,13 @@ int main()
     facture["Burger"] = 12.0;
 
     std::cout << "Contenu de la facture:" << std::endl;
-    for (const auto& plat : facture)
+    for ( auto& plat : facture)
     {
         std::cout << plat.first << ": " << plat.second << " euros" << std::endl;
     }
 
-    //Prix total
     float total = 0;
-    for (const auto& plat : facture)
+    for (auto plat : facture)
     {
         total += plat.second;
     }

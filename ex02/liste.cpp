@@ -8,19 +8,19 @@ int main() {
     }
 
     std::cout << "Contenu de la liste : ";
-    for (const auto& elem : liste) {
+    for (auto elem : liste) {
         std::cout << elem << " ";
     }
-    std::cout << std::endl;
+    std::cout <<"taille de liste : " << liste.size()<< std::endl;
 
     if (liste.size() >= 3) {
         auto it = liste.begin();
-        std::advance(it, 2);  // Avancer de deux positions pour atteindre le troisième élément.
+        std::advance(it, 2); 
         liste.erase(it);
     }
 
     std::cout << "Contenu de la liste après suppression du troisième élément : ";
-    for (const auto& elem : liste) {
+    for (auto elem : liste) { //auto permet de ne pas avoir à écrire le type de l'élément
         std::cout << elem << " ";
     }
     std::cout << std::endl;
@@ -31,10 +31,10 @@ int main() {
     }
 
     std::cout << "Contenu de la liste après insertion des 20 entiers suivants : ";
-    for (const auto& elem : liste) {
+    for (auto elem : liste) { 
         std::cout << elem << " ";
     }
-    std::cout << std::endl;
+    std::cout << "taille de liste : " << liste.size() << std::endl;
 
     return 0;
 }

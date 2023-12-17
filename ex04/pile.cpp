@@ -29,6 +29,8 @@ int main() {
     pile.push(2);
     pile.push(1);
 
+    // 
+
     //copier
     std::stack<int> pile_copie = stack_copy(pile);
 
